@@ -40,20 +40,10 @@
     });
 
 
-    // Dynamically load header and footer
+    // Bind tab-switching links and scroll-active nav on page load
     $(function () {
-        $("#header-placeholder").load("includes/header.html", function () {
-            // After header loads, set active nav link based on scroll position
-            bindNavActiveOnScroll();
-            // Bind tab-switching links (loaded inside header)
-            bindTabLinks();
-        });
-
-        $("#footer-placeholder").load("includes/footer.html", function () {
-            new WOW().init();
-            // Bind tab-switching links inside footer
-            bindTabLinks();
-        });
+        bindTabLinks();
+        bindNavActiveOnScroll();
     });
 
 
